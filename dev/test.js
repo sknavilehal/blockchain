@@ -1,0 +1,7 @@
+const Blockchain = require('./blockchain')
+const bitcoin = new Blockchain();
+
+
+const bc1 = {"chain":[{"index":1,"timestamp":1543128815923,"transactions":[],"nonce":0,"hash":"0","previousBlockHash":"0"},{"index":2,"timestamp":1543129221415,"transactions":[],"nonce":5672,"hash":"00002b62f1205be4a02b5f13b07344e7dbbe80088ec44327c34971412405da12","previousBlockHash":"0"},{"index":3,"timestamp":1543129269749,"transactions":[{"amount":12.5,"sender":"00","recipient":"d4a97120f07e11e898782741d0dde3dd","transactionId":"c65f7e60f07f11e898782741d0dde3dd"},{"amount":300,"sender":"H6J88FHRTU","recipient":"OWU38FHRTU","transactionId":"dbd0fee0f07f11e898782741d0dde3dd"},{"amount":200,"sender":"H6J88FHRTU","recipient":"OWU38FHRTU","transactionId":"de399a70f07f11e898782741d0dde3dd"},{"amount":50,"sender":"H6J88FHRTU","recipient":"OWU38FHRTU","transactionId":"e0769220f07f11e898782741d0dde3dd"}],"nonce":100790,"hash":"000002e0806f0c1f88d7898583f8cc474a2d65147e111b3719b85d4a8d3b8abc","previousBlockHash":"00002b62f1205be4a02b5f13b07344e7dbbe80088ec44327c34971412405da12"}],"pendingTransactions":[{"amount":12.5,"sender":"00","recipient":"d4a97120f07e11e898782741d0dde3dd","transactionId":"e32a6780f07f11e898782741d0dde3dd"}],"currentNodeUrl":"http://localhost:3001","networkNodes":[]};
+
+console.log('VALID:', bitcoin.chainIsValid(bc1.chain));
